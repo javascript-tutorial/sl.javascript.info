@@ -30,7 +30,7 @@ Tako več nima nobene povezave z Java-o.
 ```
 
 Danes lahko JavaScript izvedemo ne le v spletnem brskalniku, ampak tudi na
-strežniki oziroma pravzaprav na katerikoli napravi, ki uporablja
+strežnikih oziroma pravzaprav na katerikoli napravi, ki uporablja
 [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
 
 Spletni brskalniki uporabljajo različna imena za JavaScript engine:
@@ -73,13 +73,13 @@ JavaScript, ki se izvaja v spletnem brasklaniku lahko počne vse kar je v
 povezavi z manipulacijo spletne strani, interakcijo z uporabniki ali spletnim
 strežnikom. JavaScript (ki se izvede v spletnem brskalniku) lahko na primer:
 
-- Doda nov HTML na stran, spremeni obstoječo vsebino, spremeni stile.
+- Doda nov HTML na stran, spremeni obstoječo vsebino, spremeni oblikovanja.
 - Se odziva na uporabniške akcije, se poganja glede na klike z miško,
   premikanjem kazalnika, pritiskanjem tipk.
 - Pošilja zahtevke preko omrežja do oddaljenih strežnikov, nalaga in prenaša
   datoteke (t.i. [AJAX](<https://en.wikipedia.org/wiki/Ajax_(programming)>) in
   [COMET](<https://en.wikipedia.org/wiki/Comet_(programming)>) technologies).
-- Bere in nastavlja spletne piškotke, postavlja vprašanje obiskovalcem strani,
+- Bere in nastavlja spletne piškotke, postavlja vprašanja obiskovalcem strani,
   prikazuje različna sporočila.
 - Si zapomni (shrani) podatke na klientu ("local storage")
 
@@ -100,7 +100,6 @@ Primeri takih omejitev vključujejo:
   JavaScript kodo, ki to izvede (več o tem kasneje v vodniku). V praksi ta
   omejitev pomeni, da spletna stran `http://anysite.com` ne more dostopati do
   podatkov iz zavihka `http://gmail.com` ter posledično ukrasti podatke od tam.
-
 - Čeprav JavaScript lahko brez težav komunicira s strežnikom, ki je naložil
   spletno stran, ne more pa prejemati podatkov od drugih strežnikov. To lahko
   stori le, če obstaja ekspliciten dogovor (navadno izražen v HTTP glavi) z
@@ -126,25 +125,25 @@ zahtevajo za dodatna dovoljenja.
 
 ## Kaj je unikatnega pri JavaScript-u?
 
-Obstajajo vsaj _tri_ odlične stvari v JavaScript-u:
+Obstajajo vsaj _tri_ odlične stvari o JavaScript-u:
 
 ```compare
 + Popolna integracija s HTML in CSS.
-+ Enostavno stvari so izvedene preprosto.
-+ Podpora vseh glavnih brskalnikov ter je povsod samodejno omogoočen.
++ Enostavne stvari so izvedene preprosto.
++ Podpora v vseh glavnih brskalnikih, kjer je tudi samodejno omogočen.
 ```
 
-JavaScript je edina tehnologija v brskalnikih, ki omogoča vse tri hkrati in to
-naredi JavaScript unikatnega. Zaradi tega je to najbolj uporabljeno orodje za
+JavaScript je edina tehnologija v brskalnikih ki omogoča vse troje hkrati in to
+naredi JavaScript unikatnega. Zaradi tega je najbolj uporabljeno orodje za
 ustvarjanje brskalniških vmesnikov.
 
 Z JavaScript lahko pravtako razvijamo spletne strežnike, mobilne aplikacije,
 itd.
 
-## Programski jeziki, katerih podlaga je JavaScript
+## Programski jeziki, katerih se prevedejo v JavaScript
 
-Sintaksa,ki jo uporablja JavaScript, morda ni primerna za vse. Različni ljudje
-si želijo različne sposobnosti. To je tudi pričakovati saj projektne zahteve so
+Sintaksa ki jo uporablja JavaScript morda ni primerna za vse. Različni ljudje si
+želijo različne sposobnosti. To je tudi pričakovati saj projektne zahteve so
 različne za vsakogar.
 
 Tako se je nedavno razvilo ogromno število novih programskih jezikov, ki se na
@@ -166,16 +165,16 @@ Nekaj primerov takšnih programskih jezikov:
   način. Razvija ga Facebook.
 - [Dart](https://www.dartlang.org/) je povsem samostojen programski jezik, ki
   ima svoj programski stroj, ki se izvaja izven brskalniških okolij (kot so
-  mobilne aplikacije), a se vseeno lahko prevedejo v JavaScript. Razvija ga
+  mobilne aplikacije), a se vseeno lahko prevede v JavaScript. Razvija ga
   Google.
 - [Brython](https://brython.info/) je Pythonov prevajalnik za JavaScript, ki
-  omogoča razvijanje aplikacij v Python-u, brez JavaScript.
-- [Kotlin](https://kotlinlang.org/docs/reference/js-overview.html) je sodoben is
-  a modern, jedrnat in varen programski jezik, ki se lahko tudi uporablja za
-  razvoj spletnih aplikacij ali strežnikov.
+  omogoča razvijanje aplikacij v Python-u.
+- [Kotlin](https://kotlinlang.org/docs/reference/js-overview.html) je sodoben,
+  jedrnat in varen programski jezik, ki se lahko tudi uporablja za razvoj
+  spletnih aplikacij ali strežnikov.
 
 Obstaja jih še več. Kljub temu, da obstaja več prevedenih programskih jezikov za
-JavaScript, je le-ta tisti,ki se na koncu izvede torej je potrebno dobro znanje
+JavaScript, je le-ta tisti, ki se na koncu izvede torej je potrebno dobro znanje
 samega JavaScript-a za dosledno razumevanje naših aplikacij.
 
 ## Povzetek
