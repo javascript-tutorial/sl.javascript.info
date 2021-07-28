@@ -42,10 +42,16 @@ Spletni brskalniki uporabljajo različna imena za JavaScript engine:
 - [WebKit](<https://en.wikipedia.org/wiki/Safari_(web_browser)>) -- Safari
 - ...Obstajajo še druga imena kot je "ChakraCore" za Microsoft Edge ipd.
 
+<<<<<<< HEAD
 Zgornja poimenovanja si velja zapomniti saj se velikokrat pojavijo v raznih
 člankih razvijalcev, kjer jih navadno omenjajo kadar govorijo o podpori določene
 funkcionalnosti. Na primer: "lastnost X je podprta na V8", kar pomeni, da to
 lastnost lahko uporabimo na brskalnikih Chrome in Opera.
+=======
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+- ...There are other codenames like "Chakra" for IE, "JavaScriptCore", "Nitro" and "SquirrelFish" for Safari, etc.
+>>>>>>> ef8d576821ff28c69bfb7410dc79fd216b0a315b
 
 ```smart header="Kako delujejo programski stroji (angl. *engines*)?"
 
