@@ -42,12 +42,20 @@ Spletni brskalniki uporabljajo različna imena za JavaScript engine:
 - [WebKit](<https://en.wikipedia.org/wiki/Safari_(web_browser)>) -- Safari
 - ...Obstajajo še druga imena kot je "ChakraCore" za Microsoft Edge ipd.
 
+<<<<<<< HEAD
 Zgornja poimenovanja si velja zapomniti saj se velikokrat pojavijo v raznih
 člankih razvijalcev, kjer jih navadno omenjajo kadar govorijo o podpori določene
 funkcionalnosti. Na primer: "lastnost X je podprta na V8", kar pomeni, da to
 lastnost lahko uporabimo na brskalnikih Chrome in Opera.
 
 ```smart header="Kako delujejo programski stroji (angl. *engines*)?"
+=======
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome, Opera and Edge.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+- ...There are other codenames like "Chakra" for IE, "JavaScriptCore", "Nitro" and "SquirrelFish" for Safari, etc.
+
+The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome, Opera and Edge.
+>>>>>>> 6989312841d843f2350803ab552d9082437be569
 
 Programski stroji so precej zahtevni za razumevanje. A osnove so enostavne.
 
@@ -58,6 +66,7 @@ Programski stroji so precej zahtevni za razumevanje. A osnove so enostavne.
 Programski stroji opravijo dodatne optimizacije ob vsakem koraku v danem procesu. Pravtako imajo možnost opazovanja in analiziranje prevedene skripte, ki se poganja, in s tem dodatno optimizira strojno kodo glede na najdbe.
 ```
 
+<<<<<<< HEAD
 ## Kaj lahko stori JavaScript, ki se izvede v spletnem brskalniku?
 
 Sodobni JavaScript je "varen" programski jezik. To pomeni, da ne ponuja možnosti
@@ -116,6 +125,41 @@ Izjeme:
   da JavaScript ne more na skrivno prisluškovat ali omogočit spletno kamero ter
   podatke pošiljati
   [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
+=======
+## What can in-browser JavaScript do?
+
+Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
+
+JavaScript's capabilities greatly depend on the environment it's running in. For instance, [Node.js](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
+
+In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
+
+For instance, in-browser JavaScript is able to:
+
+- Add new HTML to the page, change the existing content, modify styles.
+- React to user actions, run on mouse clicks, pointer movements, key presses.
+- Send requests over the network to remote servers, download and upload files (so-called [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) and [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) technologies).
+- Get and set cookies, ask questions to the visitor, show messages.
+- Remember the data on the client-side ("local storage").
+
+## What CAN'T in-browser JavaScript do?
+
+JavaScript's abilities in the browser are limited for the sake of a user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+
+Examples of such restrictions include:
+
+- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+
+    Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
+
+    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
+- Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+
+    This is called the "Same Origin Policy". To work around that, *both pages* must agree for data exchange and contain a special JavaScript code that handles it. We'll cover that in the tutorial.
+
+    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com` and steal information from there.
+- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+>>>>>>> 6989312841d843f2350803ab552d9082437be569
 
 ![](limitations.svg)
 
@@ -128,11 +172,18 @@ zahtevajo za dodatna dovoljenja.
 Obstajajo vsaj _tri_ odlične stvari o JavaScript-u:
 
 ```compare
+<<<<<<< HEAD
 + Popolna integracija s HTML in CSS.
 + Enostavne stvari so izvedene preprosto.
 + Podpora v vseh glavnih brskalnikih, kjer je tudi samodejno omogočen.
+=======
++ Full integration with HTML/CSS.
++ Simple things are done simply.
++ Supported by all major browsers and enabled by default.
+>>>>>>> 6989312841d843f2350803ab552d9082437be569
 ```
 
+<<<<<<< HEAD
 JavaScript je edina tehnologija v brskalnikih ki omogoča vse troje hkrati in to
 naredi JavaScript unikatnega. Zaradi tega je najbolj uporabljeno orodje za
 ustvarjanje brskalniških vmesnikov.
@@ -186,3 +237,8 @@ samega JavaScript-a za dosledno razumevanje naših aplikacij.
 - Obstaja veliko programskih jezikov ki se prevedejo v JavaScript in ponujajo
   določene funkcionalnosti. Po spoznavanju JavaScript-a ja zaželjeno, da se
   spoznamo tudi s kakšnim izmed njih.
+=======
+- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+- Today, JavaScript has a unique position as the most widely-adopted browser language, fully integrated with HTML/CSS.
+- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+>>>>>>> 6989312841d843f2350803ab552d9082437be569
